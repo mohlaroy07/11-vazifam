@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    {% for user in users %}
+
+    <div>{{ user.name }}</div>
+    <div>{{ user.surname }}</div>
+    <div>{{ user.age }}</div>
+    <div>{{ user.phone }}</div>
+    <div>{{ user.email }}</div>
+    <div>{{ user.interests }}</div>
+    <div>{{ user.grade }}</div>
+
+    <br>
+
+    {% endfor %}
+
+    <hr>
+
+    <form method="post">{% csrf_token %}
+        <fieldset>
+            <legend>Yangi o'quvchi qo'shish</legend>
+
+            <div class="form-group">
+                <label for="">ismi</label>
+                <input type="text" name="ismi">
+            </div>
+
+            <div class="form-group">
+                <label for="">familiyasi</label>
+                <input type="text" name="familiyasi">
+            </div>
+
+            <div class="form-group">
+                <label for="">yoshi</label>
+                <input type="text" name="yoshi">
+            </div>
+
+            <div class="form-group">
+                <label for="">telefon raqami</label>
+                <input type="text" name="telefon_raqami">
+            </div>
+
+            <div class="form-group">
+                <label for="">emaili pochtasi</label>
+                <input type="text" name="email_pochtasi">
+            </div>
+
+            <div class="form-group">
+                <label for="">qiziqishlari</label>
+                <input type="text" name="qiziqishlari">
+            </div>
+
+            <div class="form-group">
+                <label for="">darajasi</label>
+                <input type="text" name="darajasi">
+            </div>
+
+            <button>Yuborish</button>
+
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

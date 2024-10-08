@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+
+<body>
+
+    {% for group in groups %}
+
+    <div>{{ group.course_title }}</div>
+    <div>{{ group.course_category }}</div>
+    <div>{{ group.description }}</div>
+    <div>{{ group.course_price }}</div>
+    <div>{{ group.courde_duration }}</div>
+    <div>{{ group.rating }}</div>
+    <div>{{ group.learning_style }}</div>
+    <div>{{ group.phone_number }}</div>
+    <div>{{ group.course_level }}</div>
+
+    <br>
+
+    {% endfor %}
+
+    <hr>
+
+    <form method="post">{% csrf_token %}
+
+        <fieldset>
+            <legend>Yangi kurs ochish</legend>
+
+
+            <div class="form-group">
+                <label for="">Kurs mavzusi</label>
+                <input type="text" name="kurs_mavzusi">
+            </div>
+
+            <div class="form-group">
+                <label for="">Kurs nomi</label>
+                <input type="text" name="kurs_nomi">
+            </div>
+
+            <div class="form-group">
+                <label for="">Qisqa ma'lumot</label>
+                <input type="text" name="qisqa_malumot">
+            </div>
+
+            <div class="form-group">
+                <label for="">Kurs narxi</label>
+                <input type="text" name="kurs_narxi">
+            </div>
+
+            <div class="form-group">
+                <label for="">Kurs davomiyligi</label>
+                <input type="text" name="kurs_davomiyligi">
+            </div>
+
+            <div class="form-group">
+                <label for="">Reyting</label>
+                <input type="text" name="reyting">
+            </div>
+
+            <div class="form-group">
+                <label for="">O'qish uslubi</label>
+                <input type="text" name="oqish_uslubi">
+            </div>
+
+            <div class="form-group">
+                <label for="">Murojaat uchun</label>
+                <input type="text" name="murojaat_uchun">
+            </div>
+
+            <div class="form-group">
+                <label for="">Kurs darajasi</label>
+                <input type="text" name="kurs_darajasi">
+            </div>
+
+            <button>Yuborish</button>
+        </fieldset>
+
+
+    </form>
+
+</body>
+
+</html>
